@@ -5,8 +5,9 @@
 <style type="text/css">
 .s0 { color: #cc7832;}
 .s1 { color: #a9b7c6;}
-.s2 { color: #6a8759;}
-.s3 { color: #6897bb;}
+.s2 { color: #6897bb;}
+.s3 { color: #808080;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
 </style>
 </head>
 <body bgcolor="#2b2b2b">
@@ -15,89 +16,28 @@
 <font face="Arial, Helvetica" color="#000000">
 Main.java</font>
 </center></td></tr></table>
-<pre><span class="s0">package </span><span class="s1">com.employee</span><span class="s0">;</span>
-
-<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
-
-<span class="s0">public class </span><span class="s1">Main {</span>
-
-    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
-        <span class="s0">float </span><span class="s1">subject1</span><span class="s0">;</span>
-        <span class="s0">float </span><span class="s1">subject2</span><span class="s0">;</span>
-        <span class="s0">float </span><span class="s1">subject3</span><span class="s0">;</span>
-        <span class="s0">float </span><span class="s1">subject4</span><span class="s0">;</span>
-        <span class="s0">float </span><span class="s1">subject5</span><span class="s0">;</span>
-        <span class="s0">float </span><span class="s1">sum</span><span class="s0">;</span>
-        <span class="s0">float </span><span class="s1">percentage</span><span class="s0">;</span>
-        <span class="s1">String name</span><span class="s0">;</span>
-        <span class="s0">int </span><span class="s1">date</span><span class="s0">;</span>
-        <span class="s0">int </span><span class="s1">mon</span><span class="s0">;</span>
-        <span class="s0">int </span><span class="s1">year</span><span class="s0">;</span>
-        <span class="s0">float </span><span class="s1">ms</span><span class="s0">;</span>
-        <span class="s0">float </span><span class="s1">total</span><span class="s0">;</span>
-        <span class="s0">double </span><span class="s1">tax</span><span class="s0">;</span>
-        <span class="s1">Scanner sc = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;enter the marks one by one&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">subject1 = sc.nextFloat()</span><span class="s0">;</span>
-        <span class="s1">subject2 = sc.nextFloat()</span><span class="s0">;</span>
-        <span class="s1">subject3 = sc.nextFloat()</span><span class="s0">;</span>
-        <span class="s1">subject4 = sc.nextFloat()</span><span class="s0">;</span>
-        <span class="s1">subject5 = sc.nextFloat()</span><span class="s0">;</span>
-        <span class="s1">System.out.println(subject1)</span><span class="s0">;</span>
-        <span class="s1">System.out.println(subject2)</span><span class="s0">;</span>
-        <span class="s1">System.out.println(subject3)</span><span class="s0">;</span>
-        <span class="s1">System.out.println(subject4)</span><span class="s0">;</span>
-        <span class="s1">System.out.println(subject5)</span><span class="s0">;</span>
-        <span class="s1">sum = subject1 + subject2 + subject3 + subject4 + subject5</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;total = &quot; </span><span class="s1">+ sum)</span><span class="s0">;</span>
-        <span class="s1">percentage = (sum * </span><span class="s3">100 </span><span class="s1">/ </span><span class="s3">500</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;your percentage is &quot; </span><span class="s1">+ percentage)</span><span class="s0">;</span>
-        <span class="s0">if </span><span class="s1">(percentage &gt;= </span><span class="s3">90.0</span><span class="s1">) {</span>
-            <span class="s1">System.out.println(</span><span class="s2">&quot;'A' grade&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(percentage &gt;= </span><span class="s3">75.0 </span><span class="s1">&amp;&amp; percentage &lt; </span><span class="s3">90.0</span><span class="s1">) {</span>
-            <span class="s1">System.out.println(</span><span class="s2">&quot;'B' grade&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(percentage &gt;= </span><span class="s3">60.00 </span><span class="s1">&amp;&amp; percentage &lt; </span><span class="s3">75.0</span><span class="s1">) {</span>
-            <span class="s1">System.out.println(</span><span class="s2">&quot;'C' grade&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">} </span><span class="s0">else if </span><span class="s1">(percentage &gt;= </span><span class="s3">45.0 </span><span class="s1">&amp;&amp; percentage &lt; </span><span class="s3">60.00</span><span class="s1">) {</span>
-            <span class="s1">System.out.println(</span><span class="s2">&quot;'D' grade&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
-            <span class="s1">System.out.println(</span><span class="s2">&quot;you are failed&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">}</span>
-        <span class="s1">Scanner ss = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;enter your name &quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">name = ss.next()</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;enter your birth date&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">date = ss.nextInt()</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;enter the month&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">mon = ss.nextInt()</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;enter the year&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">year = ss.nextInt()</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;enter your monthly income&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">ms = ss.nextFloat()</span><span class="s0">;</span>
-        <span class="s1">total = (ms * </span><span class="s3">12</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;Hello Mr./Mrs.&quot; </span><span class="s1">+ name + </span><span class="s2">&quot;. you are born on &quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ mon + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ year + </span><span class="s2">&quot;your annual salary is &quot; </span><span class="s1">+ total)</span><span class="s0">;</span>
-        <span class="s0">if </span><span class="s1">(total &gt;= </span><span class="s3">500000</span><span class="s1">) {</span>
-            <span class="s1">tax = total * </span><span class="s3">0.2</span><span class="s0">;</span>
-            <span class="s1">System.out.println(</span><span class="s2">&quot;your tax amount to be paid = &quot; </span><span class="s1">+ tax)</span><span class="s0">;</span>
-        <span class="s1">}</span>
-        <span class="s0">else if </span><span class="s1">(total &lt; </span><span class="s3">500000 </span><span class="s1">&amp;&amp; total &gt;= </span><span class="s3">400000</span><span class="s1">) {</span>
-            <span class="s1">tax = total * </span><span class="s3">0.15</span><span class="s0">;</span>
-            <span class="s1">System.out.println(</span><span class="s2">&quot;your tax amount to be paid = &quot; </span><span class="s1">+ tax)</span><span class="s0">;</span>
-        <span class="s1">}</span>
-        <span class="s0">else if </span><span class="s1">(total &lt; </span><span class="s3">400000 </span><span class="s1">&amp;&amp; total &gt;= </span><span class="s3">300000</span><span class="s1">) {</span>
-            <span class="s1">tax = total * </span><span class="s3">0.1</span><span class="s0">;</span>
-            <span class="s1">System.out.println(</span><span class="s2">&quot;your tax amount to be paid = &quot; </span><span class="s1">+ tax)</span><span class="s0">;</span>
-        <span class="s1">}</span>
-        <span class="s0">else if </span><span class="s1">(total &lt; </span><span class="s3">300000 </span><span class="s1">&amp;&amp; total &gt;= </span><span class="s3">200000</span><span class="s1">) {</span>
-            <span class="s1">tax = total * </span><span class="s3">0.05</span><span class="s0">;</span>
-            <span class="s1">System.out.println(</span><span class="s2">&quot;your tax amount to be paid = &quot; </span><span class="s1">+ tax)</span><span class="s0">;</span>
-        <span class="s1">}</span>
-        <span class="s0">else </span><span class="s1">{</span>
-            <span class="s1">System.out.println(</span><span class="s2">&quot;nothing to pay&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">}</span>
-
-    <span class="s1">}</span>
-<span class="s1">}</span>
-</pre>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.employee</span><span class="s0">;</span>
+<a name="l2"><span class="ln">2    </span></a>
+<a name="l3"><span class="ln">3    </span></a><span class="s0">public  class </span><span class="s1">Main {</span>
+<a name="l4"><span class="ln">4    </span></a>
+<a name="l5"><span class="ln">5    </span></a>    <span class="s0">public void </span><span class="s1">main(String[] args) {</span>
+<a name="l6"><span class="ln">6    </span></a>        <span class="s1">Employee[] avenger = </span><span class="s0">new </span><span class="s1">Employee[</span><span class="s2">5</span><span class="s1">]</span><span class="s0">;</span>
+<a name="l7"><span class="ln">7    </span></a>
+<a name="l8"><span class="ln">8    </span></a>        <span class="s3">//objects</span>
+<a name="l9"><span class="ln">9    </span></a>        <span class="s0">for</span><span class="s1">(</span><span class="s0">int </span><span class="s1">i=</span><span class="s2">0</span><span class="s0">;</span><span class="s1">i&lt;</span><span class="s2">6</span><span class="s0">;</span><span class="s1">i++){</span>
+<a name="l10"><span class="ln">10   </span></a>            <span class="s1">avenger[i]= </span><span class="s0">new </span><span class="s1">Employee()</span><span class="s0">;</span>
+<a name="l11"><span class="ln">11   </span></a>        <span class="s1">}</span>
+<a name="l12"><span class="ln">12   </span></a>        <span class="s3">//getting details</span>
+<a name="l13"><span class="ln">13   </span></a>        <span class="s0">for</span><span class="s1">(</span><span class="s0">int </span><span class="s1">i=</span><span class="s2">0</span><span class="s0">;</span><span class="s1">i&lt;</span><span class="s2">5</span><span class="s0">;</span><span class="s1">i++){</span>
+<a name="l14"><span class="ln">14   </span></a>            <span class="s1">avenger.getdetails()</span><span class="s0">;</span>
+<a name="l15"><span class="ln">15   </span></a>        <span class="s1">}</span>
+<a name="l16"><span class="ln">16   </span></a>        <span class="s0">for</span><span class="s1">(</span><span class="s0">int </span><span class="s1">i=</span><span class="s2">0</span><span class="s0">; </span><span class="s1">i&lt;</span><span class="s2">5</span><span class="s0">; </span><span class="s1">i++){</span>
+<a name="l17"><span class="ln">17   </span></a>            <span class="s1">avenger.displaydetails()</span><span class="s0">;</span>
+<a name="l18"><span class="ln">18   </span></a>        <span class="s1">}</span>
+<a name="l19"><span class="ln">19   </span></a>
+<a name="l20"><span class="ln">20   </span></a>
+<a name="l21"><span class="ln">21   </span></a>
+<a name="l22"><span class="ln">22   </span></a>    <span class="s1">}</span>
+<a name="l23"><span class="ln">23   </span></a><span class="s1">}</span></pre>
 </body>
 </html>
